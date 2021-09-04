@@ -156,7 +156,7 @@ You may want to enter a much longer message (one or two paragraphs). For that,
 you will need to *set up a git editor* (instructions
 [here](https://help.github.com/articles/associating-text-editors-with-git/))
 and type just `git commit`. Your configured default editor will open automatically, 
-and you need to save and close the window when you finish typing your commit message. 
+and you need to save and close the window when you finish typing your commit message'. 
 
 ### An aside on style
 

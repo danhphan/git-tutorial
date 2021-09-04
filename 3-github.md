@@ -54,40 +54,40 @@ left, and the addresses on the right.
 Now, push your local changes back to the origin:
 
 ```console
-$ git push origin master:master
+$ git push origin main
 Counting objects: 36, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (36/36), done.
 Writing objects: 100% (36/36), 3.33 KiB | 0 bytes/s, done.
 Total 36 (delta 25), reused 0 (delta 0)
 To git@github.com:jni/pycalc
-   8ab0457..8de6fb7  master -> master
+   8ab0457..8de6fb7  main -> main
 ```
 
-Read the above as "push to "origin" my branch "master" onto its branch
-"master". Branches are managed locally for each repository, so the branch names
+Read the above as "push to "origin" my branch "main" onto its branch
+"main". Branches are managed locally for each repository, so the branch names
 don't actually have to match. That is, we could easily have written:
 
 ```console
-$ git push origin master:other-branch-name
+$ git push origin main:other-branch-name
 ```
 
-and then the contents of our branch `master` locally would be mirrored in the
+and then the contents of our branch `main` locally would be mirrored in the
 remote branch `other-branch-name` on `origin`. In order to tell git to keep
 track of matching branch names, use the option `--set-upstream`:
 
 ```console
-$ git push origin --set-upstream master
+$ git push origin --set-upstream main
 ```
 
-This tells git: "push `master` onto `origin`'s `master`, and note that they are
+This tells git: "push `main` onto `origin`'s `main`, and note that they are
 mirrors of each other." This means that later, we only need to do:
 
 ```console
-$ git push origin
+$ git push
 ```
 
-And git will know that `master` goes onto `origin`'s `master`.
+And git will know that `main` goes onto `origin`'s `main`.
 
 After this, you'll be able to refresh your page on GitHub and
 browse your code's history.
@@ -216,10 +216,10 @@ request" button and incorporate Bob's changes to her code!
 One last thing needs to happen to really synchronise everyone's histories.
 Although Alice has Bob's changes, *Bob doesn't have Alice's commit
 incorporating his changes.* If he continues to work on his `decimals` branch,
-their histories will diverge. And if he works on his `master` branch, his
+their histories will diverge. And if he works on his `main` branch, his
 changes won't be there!
 
-The solution is for him to *pull* the master branch *from Alice's repository*.
+The solution is for him to *pull* the main branch *from Alice's repository*.
 For this, he needs to add it to his list of remotes (remember remotes?):
 
 ```console
@@ -232,9 +232,9 @@ origin	git@github.com:bob/pycalc (fetch)
 origin	git@github.com:bob/pycalc (push)
 upstream	git@github.com:alice/pycalc (fetch)
 upstream	git@github.com:alice/pycalc (push)
-$ git switch master
-$ git pull upstream master  # get upstream's master branch, and merge
-$ git push origin master
+$ git switch main
+$ git pull upstream main  # get upstream's main branch, and merge
+$ git push
 ```
 
 Bob can now inspect his history log and see that both his changes and Alice's
@@ -271,12 +271,12 @@ merge conflicts! Unlike before, you don't have access to the history on GitHub,
 so you can't just proceed with the merge and fix the merge conflicts.
 
 The common solution is to *rebase*, that is, to replay the changes on Bob's
-branch on top of the latest `master` from Alice's repository.
+branch on top of the latest `main` from Alice's repository.
 
 ```console
-$ git switch master
-$ git pull upstream master
-$ git rebase master test-2
+$ git switch main
+$ git pull
+$ git rebase main test-2
 ```
 
 During the rebase, Bob will have merge conflicts. He needs to fix these as
