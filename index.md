@@ -61,13 +61,14 @@ Understand those, and all other clients will feel deliciously simple.
 
 # Tutorial timeline (approximate)
 
-0. Installing and setting up git, GitHub, and others (30min)
 1. Git theory (30min)
-2. Working with git (1h)
-3. Break (20-30m)
-4. Working with GitHub (1h)
-5. Advanced topics discussion (15min)
-6. Putting it together: submit improvements to this workshop! (15min)
+2. Installing and setting up git, GitHub, and others (30min)
+3. Break (10min)
+4. Working with git (1.5h)
+5. Break (10min)
+6. Working with GitHub (1h)
+7. Advanced topics discussion (10min)
+8. Putting it together: submit improvements to this workshop! (20min)
 
 Click on the sections below to get started with git!
 
