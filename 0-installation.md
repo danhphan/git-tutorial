@@ -7,7 +7,7 @@ title: Installation and setup
 To work with this tutorial, you're going to need a few things:
 
 - **Git**, of course. Install this by going to the git homepage,
-  [git-scm.com](http://git-scm.com) Or see next section. 
+  [git-scm.com](http://git-scm.com).
   
 - **A GitHub account**. Create an account by going to
   [github.com](https://github.com).
@@ -19,12 +19,9 @@ To work with this tutorial, you're going to need a few things:
   here because they don't produce plain text files, but rather more elaborate
   file formats that include text formatting information.
   
-- **A graphical git client or browser**. This lets you visualise your git
-  history more easily, and understand the concepts behind git better. For a
+- **A graphical git client or browser**. This lets you visualize your git history more easily, and understand the concepts behind git better. For a
   full list of clients, see [here](http://git-scm.com/downloads/guis). On Mac,
-  I recommend [Git Tower](https://www.git-tower.com), though it's not free. The
-  cross-platform [SourceTree](https://www.sourcetreeapp.com/) is free and
-  available on Windows and Mac. On Linux, try gitg or gitk.
+  I recommend [Git Tower](https://www.git-tower.com), though it's not free. The cross-platform [SourceTree](https://www.sourcetreeapp.com/) is free and available on Windows and Mac. On Linux, try gitg or gitk.
 
 
 ## Git installation
@@ -35,13 +32,13 @@ To work with this tutorial, you're going to need a few things:
   2. When you've successfully started the installer, you should see the Git Setup wizard screen. 
     Follow the Next and Finish prompts to complete the installation. 
   3. In your StartUp menu, search for "git bash" and open it. 
-  4. Verify installation by typing `git --version` in the git bash window. You will see installed git version like this: git version 2.33.0.
+  4. Verify installation by typing `git --version` in the git bash window. You will see the installed git version like this: git version 2.33.0.
 
   <img src="https://jcutrer.com/wp-content/uploads/2018/01/launch_git_bash_start_menu.png" style="zoom:70%;align='center';" />
 
   **Install Git on Mac OS X:**
 
-  1. Download the latest [Git for Mac installer](https://sourceforge.net/projects/git-osx-installer/files/)
+  1. Download the latest [Git for Mac installer](https://sourceforge.net/projects/git-osx-installer/files/).
   2. Follow the prompts to install Git.
   3. Open your Terminal app. 
   3. Verify installation by typing `git --version` in the terminal. You will see installed git version like this: git version 2.33.0.
@@ -49,7 +46,7 @@ To work with this tutorial, you're going to need a few things:
   **Install Git on Linux:**
 
   1. Open terminal and run: `sudo apt install git-all` or `sudo yum install git`.
-  2. Verify installation by typing `git --version` in the terminal. You will see installed git version like this: git version 2.33.0.
+  2. Verify installation by typing `git --version` in the terminal. You will see the installed git version like this: git version 2.33.0.
 
 
 ## Create an account on Github
@@ -93,11 +90,11 @@ $ git lsd
 
 ## Setup SSH key
 
-Now our git configuration is completed and we ready to work with git. However, each time we want to push (upload) 
-files to GitHub, we have to associate out local machine with our GitHub account. 
+Now our git configuration is completed and we are ready to work with git. However, each time we want to push (upload) 
+files to GitHub, we have to associate the local machine with our GitHub account. 
 
-Setting up **SSH key** helps with authentication every time we want to push local commits to the web client GitHub. Please follow the instructions
-[here](https://help.github.com/en/enterprise/2.17/user/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to create ssh-key and adding it the github account. We have briefly outlined the commands needed for this step below, and please refer to the link above for more detailed explanations. 
+Setting up SSH key helps with authentication every time we want to push local commits to the web client GitHub. Please follow the instructions
+[here](https://help.github.com/en/enterprise/2.17/user/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to create ssh-key and adding it to your GitHub account. We have briefly outlined the commands needed for this step below, and please refer to the link above for more detailed explanations. 
 
 - Generating a new SSH key:
 
@@ -132,7 +129,7 @@ $ ssh -T git@github.com
 
 Verify that the fingerprint in the message you see matches the following message, then type `yes`:
 
-`Hi username (Your github username)! You've successfully authenticated, but GitHub does not
+`Hi username (Your GitHub username)! You've successfully authenticated, but GitHub does not
 provide shell access.`
 
 
@@ -167,7 +164,7 @@ Then type:
 $ ssh-add ~/.ssh/id_rsa
 {% endhighlight %}
 
-(You might need to change the filename from `id_rsa` to the whatever you used.)
+(You might need to change the filename from `id_rsa` to whatever you used.)
 See [this StackOverflow answer](http://stackoverflow.com/a/17848593) for more
 info.
 

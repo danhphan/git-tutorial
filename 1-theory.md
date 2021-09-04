@@ -20,7 +20,7 @@ you've used git for a bit.)
 
 ## Hashes and diffs
 
-A *hash* is 160-bit summary of your data. Using an algorithm called SHA-1, Git
+A *hash* is a 160-bit summary of your data. Using an algorithm called SHA-1, Git
 mashes up the contents of your files until only 160 bits remain[^hash][^hash2].
 SHA1 and related algorithms have the nice property that if your files change
 _just a little bit_, their hash changes _dramatically_. For example, here are
@@ -75,8 +75,7 @@ writing a paper, you can tag the version you submit as follows:
 $ git tag submitted-version
 ~~~
 
-From then on, the name "`submitted-version`" will be associated with that
-committed version of your files.
+From then on, the name "`submitted-version`" will be associated with that committed version of your files.
 
 In addition to storing a history of a file, git can store _alternate_
 histories! This allows you to easily maintain
@@ -97,7 +96,7 @@ merge the two versions together to update both sections.
 
 The `.git` directory that we have mentioned is known as the _repository_, or
 repo for short. It contains all your past history, including the actual data,
-the hashes of the data, dates and authors of changes, and tags and branches.
+the hashes of the data, dates, and authors of changes, and tags and branches.
 
 Once upon a time, before git was invented, repositories were always in a
 central location such as your department's main computing server. (The most
@@ -112,7 +111,7 @@ hash that is practically guaranteed to be unique, as well as one or more
 _parent_ commits that are also hashed, it is easy to reason about
 duplicated versions of the history.
 
-In addition to enabling backups, this also helps with collaboration, but adds
+In addition to enabling backups, this also helps with collaboration but adds
 an extra layer that you need to consider when using git: in addition to your
 repository in `.git` and your working copy, there are also "clone"
 repositories, also called "forks". These are useful for backups and to

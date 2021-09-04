@@ -22,7 +22,7 @@ Your git settings live in a file called `.gitconfig` in your home directory:
 and `C:\Users\username\` in Windows (7 and above).
 
 The first thing you should do after installing git is setting your name and
-email, so that your changes are properly attributed when you commit them to a
+email so that your changes are properly attributed when you commit them to a
 repo:
 
 ```console
@@ -31,7 +31,7 @@ $ git config --global user.email "your.name@your.institute.edu"
 ```
 
 (The `--global` tag means that this configuration should be used for all your
-git projects. You can change the setting for specific project, e.g. if you want
+git projects. You can change the setting for a specific project, e.g. if you want
 to use a different institute's email address, by using the command without the
 tag inside a specific project.)
 --->
@@ -50,14 +50,14 @@ conveniences: addition of a README, a gitignore, and a license.
 
 > A quick note on licenses:
 > 
-> The three most popular free and open source (FOSS) licenses are the
+> The three most popular free and open-source (FOSS) licenses are the
 > GNU Public License (GPL), the MIT license, and the BSD 3-clause license.
 > The main difference between them is that the GPL requires released
-> modifications, and even linking software, to themselves be licensed under
+> modifications, and even linking software, to themselves, be licensed under
 > GPL-compatible licenses, while MIT and BSD make no such prescriptions.
 > 
 > I'm a big proponent of BSD. Jake Vanderplas, Director of Research at
-> the University of Washington's eScience Institute, has a fantastic
+> the University of Washington's eScience Institute has a fantastic
 > [blog post](http://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/)
 > explaining why.
 >
@@ -89,7 +89,7 @@ $ git status
 ```
 
 Now you can start working on the project. We are going to create a function
-that takes in strings like '2 + 34' and produce the result, 36.
+that takes in strings like '2 + 34' and produces the result, 36.
 
 In your editor, type:
 
@@ -182,11 +182,9 @@ followed in the community:
 
 ```
 We shouldn't return 0 on error, because it can be confused with a 
-perfectly valid result. Instead, Python provides a handy value for 
-missing or invalid data: `None`.
+perfectly valid result. Instead, Python provides a handy value for missing or invalid data: `None`.
 
-Please edit your `calc.py` file so that if the operator is not 
-recognised, it returns `None` instead of 0. Then commit your change. 
+Please edit your `calc.py` file so that if the operator is not recognised, it returns `None` instead of 0. Then commit your change. 
 ```
 
 ~~~python
@@ -211,9 +209,9 @@ Your branch is ahead of 'origin/main' by 1 commit.
   (use "git push" to publish your local commits)
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
+  (use "git checkout -- <file>..." to discard changes in the working directory)
 
-	modified:   calc.py
+    modified:   calc.py
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -235,12 +233,12 @@ prompt you to use `git commit -a` or `git commit --all`, which is kind
 of like saying, "ok, *everyone in this one!*". However, it's almost
 always better to explicitly add things to the staging area, because
 you might otherwise commit changes you forgot you made. Going back to
-the snapshots analogy, you might get the extra with the incomplete
+the snapshots analogy, you might get extra with the incomplete
 makeup walking in and ruining the picture because you used `-a`! Try
 to stage things manually, or you might find yourself searching for
 "git undo commit" more than you would like!
 
-Ok let's just commit everything now. =P
+Ok, let's just commit everything now. =P
 
 BUT FIRST! Let's actually check that "everything" is what we want. In
 addition to the one-line, "files changed" summary that we've seen, we can
@@ -261,7 +259,7 @@ index ffadff3..012d92a 100644
 ```
 
 You can see that changes to a line are encoded in git as deletion of
-that line and addition of the modified line. Git works on a line by line
+that line and addition of the modified line. Git works on a line-by-line
 basis, which is why it's perfect for code and plain text files, but not
 so great for big binary files such as images.
 
@@ -328,7 +326,7 @@ a particular snapshot, like so:
 $ git checkout 18b68bcab248b571e4c4264c43b013c1cedbd7d5
 Note: switching to '18b68bcab248b571e4c4264c43b013c1cedbd7d5'.
 
-You are in 'detached HEAD' state. You can look around, make experimental
+You are in a 'detached HEAD' state. You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
 state without impacting any branches by switching back to a branch.
 
@@ -499,7 +497,7 @@ Now your `use-unpacking` branch is ready to become the main
 branch of your program. But you also don't want to throw out the documentation
 changes you made on the main branch!
 
-`git merge` can often automatically reconcile changes in two branched
+`git merge` can often automatically reconcile changes in two-branched
 histories:
 
 ```console
@@ -622,7 +620,7 @@ the two conflicting versions, and leaving the file as you want it to be
 committed: removing the markers, and combining the changes in a way
 that makes sense, and that a system like git can't figure out by itself.
 
-In this case, we simply remove all the markers, and leave the two line pairs
+In this case, we simply remove all the markers and leave the two-line pairs
 one after the other inside the file.
 
 ~~~python
@@ -644,7 +642,7 @@ def compute(expression):
         return None
 ~~~
 
-Finally, tell git you've fixed the problem by `git add`ing the file,
+Finally, tell git you've fixed the problem by `git add` in the file,
 commit, and the merge will complete!
 
 ```console
@@ -658,10 +656,8 @@ $ git commit
 In this challenge, please try to replicate the merge conflicts 
 exercise first. 
 
-Then you can check that the history of our project using our created 
-alias, `git lsd`. (See the set up chapter.)
-Please try to read the "graphical" git history and explain what the 
-branching structure means. 
+Then you can check that the history of our project using our created alias, `git lsd`. (See the setup chapter.)
+Please try to read the "graphical" git history and explain what the branching structure means. 
 ```
 
 

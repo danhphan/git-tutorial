@@ -10,7 +10,7 @@ From earlier:
 > on git. It provides repository hosting as well as a suite of
 > workflows to aid collaboration.
 
-In this section you will learn about *remote repositories*, which are
+In this section, you will learn about *remote repositories*, which are
 histories that are not next to your working directory. The operations
 involved in using these include pushing, pulling, forking, and pull
 requests.
@@ -40,8 +40,8 @@ flag:
 
 ```console
 $ git remote -v
-origin	git@github.com:jni/pycalc (fetch)
-origin	git@github.com:jni/pycalc (push)
+origin  git@github.com:jni/pycalc (fetch)
+origin  git@github.com:jni/pycalc (push)
 ```
 
 That tells both the name of the remote, *and its location*. "origin" is
@@ -94,13 +94,13 @@ browse your code's history.
 
 ## Exercise 4: GitHub pull requests
 
-For this exercise you will have to pair up with your neighbour, which
+For this exercise you will have to pair up with your neighbor, which
 we will name Alice. (And your name is Bob, in keeping with the computer
 science literature.) Decide now who will be Bob and who will be Alice in the
 pair.
 
 As Bob, you should delete your "pycalc" repository on GitHub (this is done
-under "Settings" in the right-hand menu). You've realised that Alice has her
+under "Settings" in the right-hand menu). You've realized that Alice has her
 own version and that you can both save effort by collaborating on this project.
 
 You've been wanting to do some arithmetic on some data, but the first
@@ -157,8 +157,7 @@ Filling in a useful title and message here is very important!
 
 Here's how this works: you don't know Alice. You probably have never met her. 
 So it's natural that you can't just push random stuff willy-nilly to her repository. 
-However, you do have a *shared history*, because you *forked* hers, and *she* has 
-access to your new changes. 
+However, you do have a *shared history*, because you *forked* hers, and *she* has access to your new changes. 
 So, instead of *pushing* your changes, you ask *her* to *pull* from your own history.
 
 The PR will tell Alice that you've made some changes to the code and 
@@ -166,7 +165,7 @@ you would like her to incorporate them into her project.
 Notice that you did this *without needing any special access from Alice!* 
 This is the magic of GitHub and open source.
 
-Check out the impact that GitHub has had on a few open source Python projects:
+Check out the impact that GitHub has had on a few open-source Python projects:
 
 ![GitHub's impact on FOSS](/git-tutorial/images/gh.png)
 
@@ -207,13 +206,13 @@ $ git push  # no need to specify repo or branch anymore, having `set-upstream`
 ```
 
 If either Bob or Alice go back to the PR page, they will see that the PR has
-been automagically updated with Bob's new changes! (Though they may need to
+been automatically updated with Bob's new changes! (Though they may need to
 refresh the page.)
 
 Alice, satisfied with the update, can now click on the "Merge pull
 request" button and incorporate Bob's changes to her code!
 
-One last thing needs to happen to really synchronise everyone's histories.
+One last thing needs to happen to really synchronize everyone's histories.
 Although Alice has Bob's changes, *Bob doesn't have Alice's commit
 incorporating his changes.* If he continues to work on his `decimals` branch,
 their histories will diverge. And if he works on his `main` branch, his
@@ -224,14 +223,14 @@ For this, he needs to add it to his list of remotes (remember remotes?):
 
 ```console
 $ git remote -v
-origin	git@github.com:bob/pycalc (fetch)
-origin	git@github.com:bob/pycalc (push)
+origin  git@github.com:bob/pycalc (fetch)
+origin  git@github.com:bob/pycalc (push)
 $ git remote add upstream git@github.com:alice/pycalc
 $ git remote -v
-origin	git@github.com:bob/pycalc (fetch)
-origin	git@github.com:bob/pycalc (push)
-upstream	git@github.com:alice/pycalc (fetch)
-upstream	git@github.com:alice/pycalc (push)
+origin  git@github.com:bob/pycalc (fetch)
+origin  git@github.com:bob/pycalc (push)
+upstream  git@github.com:alice/pycalc (fetch)
+upstream  git@github.com:alice/pycalc (push)
 $ git switch main
 $ git pull upstream main  # get upstream's main branch, and merge
 $ git push
@@ -260,13 +259,13 @@ twice as effective as one pair.
 
 ## Bonus exercise 2: rebasing
 
-Bob thinks testing is a swell idea, and adds a test function at the bottom in
+Bob thinks testing is a swell idea and adds a test function at the bottom in
 a branch called `test-2`, and makes a PR.
 
 Meanwhile, Alice herself has also been busy and adds a third test function at
 the bottom of the same file, before merging Bob's PR.
 
-Bob's pull request now shows a greyed out "Merge" button, because there are
+Bob's pull request now shows a greyed-out "Merge" button, because there are
 merge conflicts! Unlike before, you don't have access to the history on GitHub,
 so you can't just proceed with the merge and fix the merge conflicts.
 
@@ -288,11 +287,9 @@ Finally, Bob will try to push back to his GitHub account but this will fail.
 
 ## Notes on why you should make your own code open source
 
-- The idea that you will be scooped by someone looking at your code is
-  ludicrous. Reading code is *hard work* and no one will do it on the
-  off chance that there is a Nature paper buried in there.
-- Your own coding habits and practice will improve just by knowing that
-  it's out there. (Shame is a powerful motivator! =P)
+- The idea that you will be scooped by someone looking at your code is ludicrous. Reading code is *hard work* and no one will do it on the
+  the off chance that there is a Nature paper buried in there.
+- Your own coding habits and practice will improve just by knowing that it's out there. (Shame is a powerful motivator! =P)
 - If someone *does* look at your code and finds it useful, chances are
   that you will have gained a new collaborator, not a competitor.
 - It is just good scientific practice!
