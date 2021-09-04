@@ -115,8 +115,8 @@ that you don't necessarily want to keep for posterity.
 
 ```console
 $ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
+On branch main
+Your branch is up-to-date with 'origin/main'.
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
@@ -131,8 +131,8 @@ Tell git to add the file to its tracking system:
 ```console
 $ git add calc.py
 $ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
+On branch main
+Your branch is up-to-date with 'origin/main'.
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
@@ -143,7 +143,7 @@ Then, *commit* the changes to the history:
 
 ```console
 $ git commit --message "Initial work on a Python string calculator"
-[master c85a965] Initial work on a Python string calculator
+[main c85a965] Initial work on a Python string calculator
  1 file changed, 12 insertions(+)
  create mode 100644 calc.py
 ```
@@ -155,7 +155,8 @@ without (much) context.
 You may want to enter a much longer message (one or two paragraphs). For that,
 you will need to *set up a git editor* (instructions
 [here](https://help.github.com/articles/associating-text-editors-with-git/))
-and type just `git commit`.
+and type just `git commit`. Your configured default editor will open automatically, 
+and you need to save and close the window when you finish typing your commit message. 
 
 ### An aside on style
 
@@ -205,8 +206,8 @@ As before, we can check the status:
 
 ```console
 $ git status
-On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
   (use "git push" to publish your local commits)
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -301,7 +302,7 @@ You now have a *history* that you can look at and interact with:
 
 ```console
 $ git log
-commit a4e5f6d6c9bd5dbcad86b4c5269b9c1995a1f321 (HEAD -> master)
+commit a4e5f6d6c9bd5dbcad86b4c5269b9c1995a1f321 (HEAD -> main)
 Author: Juan Nunez-Iglesias <juan.nunez-iglesias@monash.edu>
 Date:   Tue Dec 10 16:21:35 2019 +1100
 
@@ -374,16 +375,16 @@ def compute(expression):
 Thankfully, it's easy to go back to the latest version:
 
 ```console
-$ git switch master
+$ git switch main
 Previous HEAD position was c0a11b0... Initial work on a Python string calculator
-Switched to branch 'master'
+Switched to branch 'main'
 ```
 
 ## Exercise 2: branches
 
 Now we will undertake a major change to the structure of the function.
 Because it's such a big
-change, you want to work in a different _branch_ from "master", so that
+change, you want to work in a different _branch_ from "main", so that
 you can keep using that one while fixing up the new stuff. In practice,
 almost _every_ change is significant enough to warrant a new branch,
 because "sprouting" one is cheap and easy.
@@ -431,7 +432,7 @@ to debug. Plus, she has no patience for broken software! Or
 functions without documentation! Let's go back to our working version:
 
 ```console
-$ git switch master
+$ git switch main
 ```
 
 And edit the file to add an informative comment above the function
@@ -458,11 +459,11 @@ We can commit those changes:
 
 ```console
 $ git commit -a -m "Add function documentation"
-[master ef26741] Add function documentation
+[main ef26741] Add function documentation
  1 file changed, 2 insertions(+)
 ```
 
-Whew! Now we have that working version (the master branch should always
+Whew! Now we have that working version (the main branch should always
 work!), with documentation, we can send it to our supervisor and go back to
 fixing our fancy iterable-unpacking version.
 
@@ -496,14 +497,14 @@ And we commit it:
 
 Now your `use-unpacking` branch is ready to become the main
 branch of your program. But you also don't want to throw out the documentation
-changes you made on the master branch!
+changes you made on the main branch!
 
 `git merge` can often automatically reconcile changes in two branched
 histories:
 
 ```console
- $ git switch master
-Switched to branch 'master'
+ $ git switch main
+Switched to branch 'main'
 
  $ git merge use-unpacking
 Auto-merging calc.py
@@ -541,7 +542,7 @@ Let's see how it does this.
 Create a branch to add the multiplication operator:
 
 ```console
-$ git switch master --create add-multiplication
+$ git switch main --create add-multiplication
 ```
 
 It's just a matter of adding the following lines:
@@ -560,15 +561,15 @@ $ git commit -a -m "Add support for multiplication operator"
 Now, repeat the same procedure, including the new branch, for division:
 
 ```console
-$ git switch master --create add-division
+$ git switch main --create add-division
 # ... make changes to python file...
 $ git commit -a -m "Add support for division operator"
 ```
 
-Finally, bring those changes into the master branch:
+Finally, bring those changes into the main branch:
 
 ```console
-$ git switch master
+$ git switch main
 $ git merge add-multiplication
 $ git merge add-division
 ```
@@ -666,7 +667,7 @@ branching structure means.
 
 ```
  $ git lsd
-*   96b6056 (HEAD -> master) Merge branch 'add-division'
+*   96b6056 (HEAD -> main) Merge branch 'add-division'
 |\
 | * f07a196 (add-division) Add support for division operator
 * | 81d75fc (add-multiplication) Add support for multiplication operator
