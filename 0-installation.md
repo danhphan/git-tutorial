@@ -12,7 +12,7 @@ To work with this tutorial, you're going to need a few things:
 - **A GitHub account**. Create an account by going to
   [github.com](https://github.com).
   
-- **A text editor**. Try [Atom](https://atom.io) or [Sublime Text](http://www.sublimetext.com) (both of which are multiplatform). 
+- **A text editor**. Try [Visual Studio Code](https://code.visualstudio.com/) (VS Code) or [Sublime Text](http://www.sublimetext.com) (both of which are multiplatform). 
   
   Configure them to be your default git editors by following the instructions on [this page](https://help.github.com/articles/associating-text-editors-with-git/).
   Note: programs like Microsoft Word or TextEdit are *not* valid text editors
@@ -69,10 +69,10 @@ DO NOT copy the `$` for the command.
 Note that you need to replace "Your name" with your own information. 
 Please use the same email address you used for your GitHub account.
 
-For a more user-friendly text editor, we recommend [Atom](https://atom.io) and you can associate it with Git by typing the following command in your terminal/git bash window:
+For a more user-friendly text editor, we recommend [Visual Studio Code](https://code.visualstudio.com/) and you can associate it with Git by typing the following command in your terminal/git bash window:
 
 {% highlight console %}
-$ git config --global core.editor "atom --wait"
+$ git config --global core.editor "code --wait"
 {% endhighlight %}
 
 The following command also lets you see a rudimentary graphic of your history
